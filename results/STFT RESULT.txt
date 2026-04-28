@@ -1,0 +1,57 @@
+STFT SPECTROGRAM BLOCK-FEATURE RESULTS
+======================================
+
+Model:
+Random Forest Classifier
+
+Feature Extraction Method:
+STFT Spectrogram Block Features
+
+Preprocessing Steps:
+- Audio loaded as mono
+- Amplitude normalized
+- STFT computed using librosa.stft()
+- Magnitude spectrogram extracted
+- Spectrogram normalized by maximum value
+- Spectrogram fixed to the same number of time frames
+- Spectrogram divided into time-frequency blocks
+- Mean and standard deviation extracted from each block
+
+STFT Parameters:
+N_FFT = 256
+WIN_LENGTH = 256
+HOP_LENGTH = 64
+WINDOW = hann
+
+Block Parameters:
+N_FREQ_BLOCKS = 10
+N_TIME_BLOCKS = 8
+FIXED_TIME_FRAMES = 40
+
+Block Feature Extraction:
+10 frequency blocks × 8 time blocks = 80 blocks
+
+For each block:
+- Mean
+- Standard deviation
+
+Feature Vector Length:
+80 blocks × 2 features = 160 features per audio file
+
+Train-Test Split:
+90% training
+10% testing
+Index-based split:
+index 0–4   = test set
+index 5–49  = training set
+
+Random Forest Parameters:
+n_estimators = 500
+max_depth = 25
+min_samples_split = 3
+min_samples_leaf = 1
+max_features = sqrt
+random_state = 42
+
+Accuracy:
+96.00%

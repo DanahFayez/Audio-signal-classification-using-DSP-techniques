@@ -1,0 +1,28 @@
+DFT ANALYSIS RESULTS
+====================
+
+Model:
+Random Forest Classifier
+
+Feature Extraction Method:
+DFT / FFT frequency-domain features
+
+Features Used:
+- Spectral centroid
+- Spectral bandwidth
+- Spectral rolloff at 85%
+- Dominant frequency
+- Spectral entropy
+- Band energy ratios
+- Spectral flatness
+- Spectral skewness
+- Spectral kurtosis
+- Zero-crossing rate
+
+Train-Test Split:
+90% training
+10% testing
+Stratified split: Yes
+
+Accuracy:
+84.00%

@@ -1,0 +1,29 @@
+TIME-DOMAIN ANALYSIS RESULTS
+============================
+
+Model:
+Random Forest Classifier
+
+Feature Extraction Method:
+Time-domain waveform features
+
+Features Used:
+- Zero-crossing rate statistics
+- RMS energy statistics
+- Signal envelope statistics
+- Duration
+- Energy
+- Absolute mean amplitude
+- Variance
+- Peak amplitude
+- Crest factor
+- Silence ratio
+- Autocorrelation features
+
+Train-Test Split:
+90% training
+10% testing
+Stratified split: Yes
+
+Accuracy:
+74.00%
